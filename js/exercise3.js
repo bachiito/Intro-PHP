@@ -85,7 +85,6 @@ const months = [
 
 const showRandomMonthBtn = document.querySelector("#show-random-month");
 showRandomMonthBtn.addEventListener("click", displayRandomMonth);
-showRandomMonthBtn.addEventListener("click", console.log("hola"));
 
 function displayRandomMonth() {
   const randomMonthIndex = getRandomNumber(12);
