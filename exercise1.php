@@ -38,6 +38,10 @@
             --bs-list-group-bg: transparent;
             --bs-list-group-color: snow;
         }
+
+        .letter-spacing-1 {
+            letter-spacing: 1px;
+        }
     </style>
 
   </head>
@@ -105,11 +109,11 @@
                             variable o secuencia de escape. Por ejemplo:
 
                             <div class="bg-black p-4 my-3 rounded-4">
-                                <p class="m-0">
+                                <p class="font-monospace fw-normal letter-spacing-1 m-0">
                                     <span class="text-danger">$nombre</span> = 
                                     <span class="text-success">'Juan'</span>;
                                 </p>
-                                <p class="m-0">
+                                <p class="font-monospace fw-normal letter-spacing-1 m-0">
                                     <span class="text-primary">echo</span>
                                     <span class="text-success">'Hola $nombre'</span>; &nbsp;
                                     <span class="text-secondary">// muestra 'Hola $nombre'</span>
@@ -129,11 +133,11 @@
                             comillas dobles antes de mostrar el resultado. Por ejemplo:
 
                             <div class="bg-black p-4 my-3 rounded-4">
-                                <p class="m-0">
+                                <p class="font-monospace fw-normal letter-spacing-1 m-0">
                                     <span class="text-danger">$nombre</span> = 
                                     <span class="text-success">'Juan'</span>;
                                 </p>
-                                <p class="m-0">
+                                <p class="font-monospace fw-normal letter-spacing-1 m-0">
                                     <span class="text-primary">echo</span>
                                     <span class="text-success">"Hola $nombre"</span>; &nbsp;
                                     <span class="text-secondary">// muestra 'Hola Juan'</span>
