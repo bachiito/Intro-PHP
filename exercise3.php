@@ -46,42 +46,58 @@
     
     <!-- Styles -->
     <style>
-        div#month {
+        div#month-container {
             --bs-card-bg: transparent;
+            min-height: 550px;
         }
     </style>
+
+    <!-- JS -->
+    <script defer src="js/exercise3.js"></script>
   </head>
   
-  <body class="bg-dark py-4">
+  <body class="bg-dark py-4 text-center">
     <div class="container text-bg-dark">
         <div class="col-md-10 col-lg-8 mx-auto">
             <div 
-                id="month"
-                class="card col-sm-8 col-md-7 col-lg-6 border border-light mx-auto"
+                id="month-container"
+                class="card col-sm-8 col-md-7 col-lg-6  mx-auto d-none border-0"
                 style="max-width: 400px;"
             >
-                <div class="p-3">
-                    <img 
-                        src=""
-                        class="card-img-top rounded-3" 
-                        alt="Abraham Rivera profile photo"
-                    >
-                </div>
-                <div class="card-body">
-                    <p class="card-title h4">
+                <div class="border border-light rounded-4">
+                    <div class="p-3">
+                        <img 
+                            id="month-img"
+                            class="card-img-top rounded-3 border" 
+                            alt="Mes aleatorio"
+                        >
+                    </div>
+                    <div class="card-body">
                         <?php 
-                            global $meses;
-                        ?>
-                    </p>
-                    <p class="card-text">
-
-                    </p>
+                            // Los meses serán mostrados al usuario utilizando JS
+                            // para así poder mostrarle un mes aleatorio
+                            global $meses;  
+                            echo "<span style='display: none;'>$meses[4]</span>";
+                            echo "<span style='display: none;'>$meses[11]</span>";
+                        ?>    
+                        <p class="card-title h4 text-center"></p>
+                        <p class="card-text"></p>
+                    </div>
                 </div>
             </div>    
             
-            <a class="btn btn-primary mt-5" href="index.php">
-                Volver
-            </a>
+            <div class="mt-4">
+                <a class="btn btn-primary" href="index.php">
+                    Volver
+                </a>
+                <button 
+                    id="show-random-month"
+                    class="btn btn-secondary ms-3" 
+                    type="button"
+                >
+                    Mostrar mes aleatorio
+                </button>
+            </div>
         </div>
     </div>
   </body>
